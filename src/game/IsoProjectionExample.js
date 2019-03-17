@@ -55,13 +55,18 @@ export default class IsoProjectionExample extends Scene {
     }
   }
 }
+const window = global.window
+const pxl = window.devicePixelRatio
+const width = window.innerWidth * pxl
+const height = window.innerHeight * pxl
 
 let config = {
   type: Phaser.AUTO,
-  width: 600,
-  height: 600,
+  width: width,
+  height: height,
   pixelArt: true,
-  scene: IsoProjectionExample
+  scene: IsoProjectionExample,
+  parent: 'App'
 }
 
 new Game(config)
