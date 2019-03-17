@@ -23,7 +23,7 @@ export default class IsoProjectionExample extends Scene {
 
   create() {
     // Set the origin of the isometric projection to the mid top of the screen
-    this.iso.projector.origin.setTo(0.5, 0.1)
+    this.iso.projector.origin.setTo(0.5, 0.35)
 
     // Even though the children are added back to front, it is sorted the right way
     // because depth value is set on the IsoSprites and Phaser 3 sorts after that by default.
@@ -35,7 +35,9 @@ export default class IsoProjectionExample extends Scene {
         // Add a tween so we can see the depth sorting works on updates
         this.tweens.add({
           targets: isoCube,
-          isoX: 256 - xx + 32,
+          isoX: xx / 16 + xx - 32,
+          isoY: yy / 16 + yy - 32,
+          isoZ: -Math.cos((xx - yy) / 4) * Math.sin((xx + yy) / 4.03) * 20,
           duration: 2000,
           ease: 'Quad.easeInOut',
           delay: 0,
