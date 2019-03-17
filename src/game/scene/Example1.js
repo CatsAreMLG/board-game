@@ -23,6 +23,7 @@ export default class Example1 extends Phaser.Scene {
     })
     this.input.keyboard.on('keyup', e => {
       if (e.key === '2') this.scene.start('Example2')
+      if (e.key === '3') this.scene.start('Example3')
     })
     this.key_A = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
     this.input.on('pointerdown', e => {

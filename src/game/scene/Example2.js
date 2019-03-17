@@ -24,8 +24,12 @@ export default class Example2 extends Phaser.Scene {
       }
     })
     this.key_1 = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE)
+    this.key_3 = this.input.keyboard.addKey(
+      Phaser.Input.Keyboard.KeyCodes.THREE
+    )
   }
   update(delta) {
     if (this.key_1.isDown) this.scene.start('Example1')
+    if (this.key_3.isDown) this.scene.start('Example3')
   }
 }
