@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "phaser": "^3.16.2",
+    "phaser3-plugin-isometric": "^0.0.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
