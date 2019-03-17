@@ -23,5 +23,9 @@ export default class Example2 extends Phaser.Scene {
         trg[0].setColor('white')
       }
     })
+    this.key_1 = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE)
+  }
+  update(delta) {
+    if (this.key_1.isDown) this.scene.start('Example1')
   }
 }

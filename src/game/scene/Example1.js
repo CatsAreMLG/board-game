@@ -22,9 +22,7 @@ export default class Example1 extends Phaser.Scene {
       physicsImage.setVelocity(Phaser.Math.RND.integerInRange(-100, 100), -300)
     })
     this.input.keyboard.on('keyup', e => {
-      if (e.key === '2') {
-        this.scene.start('Example2')
-      }
+      if (e.key === '2') this.scene.start('Example2')
     })
     this.key_A = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
     this.input.on('pointerdown', e => {
