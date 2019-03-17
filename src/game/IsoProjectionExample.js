@@ -51,10 +51,10 @@ export default class IsoProjectionExample extends Scene {
   update() {
     // We can interact with the cubes
     // Pick a pseudo-random cube and let it sink on click / touch
-    if (this.input.activePointer.justDown) {
-      const cube = this.children.list[Math.trunc(Math.random() * 35)]
-      cube.isoZ -= 48
-    }
+    // if (this.input.activePointer.justDown) {
+    //   const cube = this.children.list[Math.trunc(Math.random() * 35)]
+    //   cube.isoZ -= 48
+    // }
   }
 }
 const window = global.window
